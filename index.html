@@ -560,6 +560,343 @@
       color: var(--white);
     }
 
+
+
+    /*
+      =====================================================
+      RESPONSIVE IMPROVEMENTS
+      =====================================================
+
+      Desktop: full table layout.
+      Phone: leaderboard becomes stacked cards so users do not need to
+      pinch-zoom or scroll sideways.
+    */
+
+    body {
+      overflow-x: hidden;
+    }
+
+    img, svg, video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .logo-mark {
+      flex: 0 0 auto;
+      font-size: 0.72rem;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-card-header .big,
+    .mini-stat .value,
+    .group-name {
+      overflow-wrap: anywhere;
+    }
+
+    .table-wrap {
+      -webkit-overflow-scrolling: touch;
+    }
+
+    @media (max-width: 760px) {
+      .top-bar-inner {
+        justify-content: center;
+        text-align: center;
+        padding: 9px 16px;
+      }
+
+      .site-header {
+        position: static;
+      }
+
+      .site-header-inner {
+        padding: 14px 16px;
+      }
+
+      .brand {
+        align-items: flex-start;
+      }
+
+      .logo-mark {
+        width: 44px;
+        height: 44px;
+        font-size: 0.62rem;
+      }
+
+      .logo-mark::after {
+        inset: 8px;
+      }
+
+      .brand-text .eyebrow {
+        font-size: 0.62rem;
+        line-height: 1.35;
+        letter-spacing: 0.11em;
+      }
+
+      .brand-text .name {
+        line-height: 1.25;
+      }
+
+      .nav-pills {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .nav-pill {
+        text-align: center;
+        padding: 9px 10px;
+      }
+
+      .hero {
+        padding: 30px 16px 22px;
+        gap: 18px;
+      }
+
+      .event-label {
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+        padding: 8px 11px;
+      }
+
+      h1 {
+        font-size: clamp(2.1rem, 13vw, 3.2rem);
+        line-height: 1.02;
+        letter-spacing: -0.055em;
+      }
+
+      .hero-subtitle {
+        margin-top: 16px;
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+
+      .hero-actions {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .hero-card-header,
+      .hero-card-body {
+        padding: 18px;
+      }
+
+      .hero-card-header .big {
+        font-size: 1.75rem;
+        line-height: 1.1;
+      }
+
+      .mini-stat {
+        gap: 12px;
+      }
+
+      .main {
+        padding: 14px 16px 42px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        margin-bottom: 12px;
+      }
+
+      .last-updated {
+        font-size: 0.88rem;
+      }
+
+      .leaderboard-shell {
+        overflow: visible;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .leaderboard-top {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        margin-bottom: 12px;
+      }
+
+      .legend {
+        width: 100%;
+      }
+
+      .legend span {
+        flex: 1 1 auto;
+        text-align: center;
+      }
+
+      .table-wrap {
+        overflow: visible;
+      }
+
+      table,
+      tbody,
+      tr,
+      td {
+        display: block;
+        width: 100%;
+      }
+
+      table {
+        min-width: 0;
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tbody tr {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: 0 10px 28px rgba(18, 48, 68, 0.08);
+        margin-bottom: 14px;
+        overflow: hidden;
+      }
+
+      tbody tr:hover {
+        background: var(--white);
+      }
+
+      tbody tr.rank-1 {
+        background: linear-gradient(180deg, var(--gold-soft), #ffffff 58%);
+        border-color: rgba(245, 185, 66, 0.55);
+      }
+
+      td {
+        border-bottom: 1px solid var(--line);
+        padding: 13px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      td:last-child {
+        border-bottom: 0;
+      }
+
+      td::before {
+        content: attr(data-label);
+        color: var(--muted);
+        font-size: 0.72rem;
+        font-weight: 900;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+        flex: 0 0 38%;
+      }
+
+      .rank-cell {
+        width: 100%;
+      }
+
+      .rank-badge {
+        width: 38px;
+        height: 38px;
+      }
+
+      td[data-label="Young Member Group"] {
+        align-items: flex-start;
+      }
+
+      td[data-label="Young Member Group"] > div {
+        text-align: right;
+      }
+
+      .group-name {
+        font-size: 1rem;
+      }
+
+      .group-meta {
+        font-size: 0.8rem;
+      }
+
+      .points {
+        font-size: 1.25rem;
+      }
+
+      .progress-track {
+        min-width: 0;
+        width: 100%;
+        max-width: 210px;
+      }
+
+      .callout-grid {
+        margin-top: 18px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .top-bar-inner div:last-child {
+        display: none;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-text .eyebrow {
+        display: none;
+      }
+
+      .nav-pills {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 15vw, 2.75rem);
+      }
+
+      .hero-card-header .big {
+        font-size: 1.45rem;
+      }
+
+      .mini-stat {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .mini-stat .value {
+        text-align: left;
+      }
+
+      .leaderboard-top {
+        padding: 15px;
+      }
+
+      .legend {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      td {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      td::before {
+        flex-basis: auto;
+      }
+
+      td[data-label="Young Member Group"] > div {
+        text-align: left;
+      }
+
+      .progress-track {
+        max-width: none;
+      }
+    }
+
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
@@ -749,7 +1086,7 @@
   </main>
 
   <footer>
-    <strong>NCSEA YMG Trivia Week</strong> &nbsp;|&nbsp;
+    <strong>NCSEA YMSC Trivia Week</strong> &nbsp;|&nbsp;
     Young Member Group Leaderboard
   </footer>
 
@@ -847,24 +1184,26 @@
         const crown = rank === 1 ? " 🏆" : "";
 
         row.innerHTML = `
-          <td class="rank-cell">
+          <td class="rank-cell" data-label="Rank">
             <div class="rank-badge">${rank}</div>
           </td>
 
-          <td>
-            <div class="group-name">${group.name}${crown}</div>
-            <div class="group-meta">NCSEA Young Member Group</div>
+          <td data-label="Young Member Group">
+            <div>
+              <div class="group-name">${group.name}${crown}</div>
+              <div class="group-meta">NCSEA Young Member Group</div>
+            </div>
           </td>
 
-          <td>
+          <td data-label="Points">
             <div class="points">${group.points.toLocaleString()}</div>
           </td>
 
-          <td>
+          <td data-label="Movement">
             <div class="movement ${movement.className}">${movement.text}</div>
           </td>
 
-          <td>
+          <td data-label="Progress to Lead">
             <div class="progress-track" aria-label="${group.name} progress to current leader">
               <div class="progress-fill" style="width: ${progressPercent}%"></div>
             </div>
