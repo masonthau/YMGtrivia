@@ -254,59 +254,6 @@
       box-shadow: 0 10px 24px rgba(245, 185, 66, 0.28);
     }
 
-    .submit-banner {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 22px 22px;
-    }
-
-    .submit-banner-inner {
-      background: linear-gradient(135deg, var(--navy), var(--blue));
-      color: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .submit-banner-inner::after {
-      content: "";
-      position: absolute;
-      right: -70px;
-      top: -90px;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.11);
-    }
-
-    .submit-banner-text {
-      position: relative;
-      z-index: 1;
-    }
-
-    .submit-banner-text strong {
-      display: block;
-      font-size: 1.18rem;
-      margin-bottom: 5px;
-    }
-
-    .submit-banner-text span {
-      color: rgba(255, 255, 255, 0.82);
-      line-height: 1.45;
-    }
-
-    .submit-banner .button {
-      position: relative;
-      z-index: 1;
-      flex: 0 0 auto;
-    }
-
     .submit-link {
       color: var(--blue-dark);
       font-weight: 900;
@@ -631,8 +578,6 @@
       color: var(--white);
     }
 
-
-
     /*
       =====================================================
       RESPONSIVE IMPROVEMENTS
@@ -753,21 +698,6 @@
         width: 100%;
       }
 
-
-      .submit-banner {
-        padding: 0 16px 18px;
-      }
-
-      .submit-banner-inner {
-        align-items: stretch;
-        flex-direction: column;
-        padding: 18px;
-      }
-
-      .submit-banner .button {
-        width: 100%;
-        justify-content: center;
-      }
 
       .hero-card-header,
       .hero-card-body {
@@ -1103,16 +1033,6 @@
         </div>
       </div>
     </aside>
-  </section>
-
-  <section class="submit-banner" aria-label="Submit completed challenge">
-    <div class="submit-banner-inner">
-      <div class="submit-banner-text">
-        <strong>Completed a challenge?</strong>
-        <span>Submit your response through the official Trivia Week form so points can be reviewed and added to the leaderboard.</span>
-      </div>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS8CCtyj2_FRTaPDhhGTPBc1JsvgPDaDMgkGSokhTlat-C6Q/formResponse" class="button button-submit" target="_blank" rel="noopener noreferrer">Submit Challenge ↗</a>
-    </div>
   </section>
 
   <main class="main">
