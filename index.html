@@ -247,6 +247,77 @@
       border: 1px solid var(--line);
     }
 
+
+    .button-submit {
+      color: var(--navy);
+      background: var(--gold);
+      box-shadow: 0 10px 24px rgba(245, 185, 66, 0.28);
+    }
+
+    .submit-banner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 22px 22px;
+    }
+
+    .submit-banner-inner {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .submit-banner-inner::after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      top: -90px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.11);
+    }
+
+    .submit-banner-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .submit-banner-text strong {
+      display: block;
+      font-size: 1.18rem;
+      margin-bottom: 5px;
+    }
+
+    .submit-banner-text span {
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.45;
+    }
+
+    .submit-banner .button {
+      position: relative;
+      z-index: 1;
+      flex: 0 0 auto;
+    }
+
+    .submit-link {
+      color: var(--blue-dark);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .submit-link:hover,
+    .submit-link:focus {
+      text-decoration: underline;
+    }
+
     .hero-card {
       background: var(--white);
       border: 1px solid var(--line);
@@ -682,6 +753,22 @@
         width: 100%;
       }
 
+
+      .submit-banner {
+        padding: 0 16px 18px;
+      }
+
+      .submit-banner-inner {
+        align-items: stretch;
+        flex-direction: column;
+        padding: 18px;
+      }
+
+      .submit-banner .button {
+        width: 100%;
+        justify-content: center;
+      }
+
       .hero-card-header,
       .hero-card-body {
         padding: 18px;
@@ -988,6 +1075,7 @@
 
       <div class="hero-actions">
         <a href="#leaderboard" class="button button-primary">View Leaderboard ↓</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS8CCtyj2_FRTaPDhhGTPBc1JsvgPDaDMgkGSokhTlat-C6Q/formResponse" class="button button-submit" target="_blank" rel="noopener noreferrer">Submit Completed Challenge ↗</a>
         <span class="button button-secondary" id="heroUpdated">Updated Daily</span>
       </div>
     </div>
@@ -1015,6 +1103,16 @@
         </div>
       </div>
     </aside>
+  </section>
+
+  <section class="submit-banner" aria-label="Submit completed challenge">
+    <div class="submit-banner-inner">
+      <div class="submit-banner-text">
+        <strong>Completed a challenge?</strong>
+        <span>Submit your response through the official Trivia Week form so points can be reviewed and added to the leaderboard.</span>
+      </div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS8CCtyj2_FRTaPDhhGTPBc1JsvgPDaDMgkGSokhTlat-C6Q/formResponse" class="button button-submit" target="_blank" rel="noopener noreferrer">Submit Challenge ↗</a>
+    </div>
   </section>
 
   <main class="main">
@@ -1061,8 +1159,9 @@
         <div class="kicker">How It Works</div>
         <h3>Challenges</h3>
         <p>
-          Points are added after each trivia challenge. Refresh this page throughout
-          the week to see updated standings.
+          Points are added after each trivia challenge. After completing a challenge,
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeS8CCtyj2_FRTaPDhhGTPBc1JsvgPDaDMgkGSokhTlat-C6Q/formResponse" class="submit-link" target="_blank" rel="noopener noreferrer">submit it here</a>
+          so it can be reviewed for scoring.
         </p>
       </article>
 
@@ -1114,17 +1213,12 @@
       the expected rank, or leave it blank.
     */
 
-    const LAST_UPDATED = "Thursday, June 11, 2026";
+    const LAST_UPDATED = "Friday, June 12, 2026";
 
     const LEADERBOARD_DATA = [
       { name: "MNSEA YMG", points: 7, yesterdayRank: 1 },
-      { name: "TBD", points: 0, yesterdayRank: 2 },
-      { name: "TBD", points: 0, yesterdayRank: 3 },
-      { name: "TBD", points: 0, yesterdayRank: 4 },
-      { name: "TBD", points: 0, yesterdayRank: 5 },
-      { name: "TBD", points: 0, yesterdayRank: 6 },
-      { name: "TBD", points: 0, yesterdayRank: 7 },
-      { name: "TBD", points: 0, yesterdayRank: 8 }
+      { name: "SEAONC YMF", points: 8, yesterdayRank: 2 },
+      { name: "TNSEA West", points: 0.5, yesterdayRank: 3 },
     ];
 
     /*
